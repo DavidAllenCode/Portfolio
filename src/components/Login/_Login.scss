@@ -1,0 +1,20 @@
+@import "../Global/SassVariables";
+
+.login {
+  .container,
+  .row {
+    height: 100%;
+  }
+  .username,
+  .password {
+    input {
+      font-size: 25px;
+      color: $primary-blue;
+      &::placeholder {
+        color: $secondary-blue;
+      }
+      background-color: $background-white;
+    }
+  }
+  background-color: $light-gray;
+}

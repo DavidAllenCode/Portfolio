@@ -1,0 +1,116 @@
+$primary-blue: #133770;
+$secondary-blue: #427aa1;
+$primary-green: #679436;
+$secondary-green: #a5be00;
+$background-white: #ebf2fa;
+
+$tertiary-blue: #bacedc;
+$another-blue: #93a4be;
+$primary-gray: #6b6e72;
+$primary-white: #fff;
+
+$border-gray: #d9e1e8;
+$border-light-blue: #a9c2d5;
+$background-light-blue: #e1ecf3;
+
+$error-color-red: #e8454b;
+$error-background-red: #f7d2d3;
+$error-border-red: #e8454b;
+$light-gray: #818489;
+
+$primary-font: "Open Sans";
+$secondary-font: Arial;
+$font-family: "Open Sans", Arial;
+$light: 200;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$default-font-size: 1.4rem;
+$default-line-height: 20px;
+$font-semi-bold: 600;
+
+$footer-height: 8px;
+
+$overlay-primary-gray: rgba(77, 98, 115, 0.8);
+
+/* sass mixins - not react mixins, which are evil */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($properties: all, $animation-type: linear, $ms-speed: 0.3s) {
+  transition: $properties $animation-type $ms-speed;
+}
+
+@mixin left-to-right-bg-gradient($left-color, $right-color) {
+  background: $left-color; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    $left-color 0%,
+    $right-color 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    $left-color 0%,
+    $right-color 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    $left-color 0%,
+    $right-color 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left-color', endColorstr='$right-color',GradientType=1 ); /* IE6-9 */
+}
+@mixin topleft-to-bottomright-bg-gradient($left-color, $right-color) {
+  background: $left-color; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    $left-color 0%,
+    $right-color 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    $left-color 0%,
+    $right-color 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    $left-color 0%,
+    $right-color 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$left-color', endColorstr='$right-color',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+@mixin top-to-bottom-bg-gradient($top-color, $bottom-color) {
+  background: $top-color; /* Old browsers */
+  background: -moz-linear-gradient(
+    180deg,
+    $top-color 0%,
+    $bottom-color 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    180deg,
+    $top-color 0%,
+    $bottom-color 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    180deg,
+    $top-color 0%,
+    $top-color 60%,
+    $bottom-color 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-color', endColorstr='$bottom-color',GradientType=0 ); /* IE6-9 fallback on horizontal gradient */
+}
+@mixin opacity($val) {
+  opacity: $val;
+}
+@mixin hosted-bg-img($partial-path) {
+  background-image: url("images/"+$partial-path);
+}
+@mixin normal-box-shadow() {
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(195, 218, 231, 1);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(195, 218, 231, 1);
+  box-shadow: 0px 3px 6px 0px rgba(195, 218, 231, 1);
+}
