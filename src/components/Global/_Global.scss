@@ -1,7 +1,82 @@
+@import "./SassVariables";
+
 html,
 body,
 #davidAllen,
 #davidAllen,
 #davidAllen > div {
   height: 100%;
+}
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: $bold;
+  @include border-radius(6px);
+  @include transition();
+  padding: 1.6rem 2rem;
+
+  &.btn-primary {
+    background-color: $primary-blue;
+    border: solid 1px $primary-blue;
+    color: $primary-white;
+    width: 100%;
+    white-space: normal;
+
+    &.error-btn {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  &.btn-secondary {
+    background-color: $primary-white;
+    border: solid 1px $border-gray;
+    color: $primary-blue;
+    width: 100%;
+    white-space: normal;
+
+    &.dropdown-toggle {
+    }
+  }
+  &.btn-tertiary {
+    background-color: $primary-white;
+    border: solid 1px $primary-white;
+    color: $primary-blue;
+    font-size: 1.6rem;
+    font-weight: $semibold;
+    width: 100%;
+    white-space: normal;
+  }
+  &.btn-text {
+    &:not([disabled]) {
+      background-color: inherit;
+      border-radius: 0;
+      border-style: none;
+      color: $primary-blue;
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      padding: 0;
+      margin: 0;
+      transition: none;
+      vertical-align: unset;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        vertical-align: baseline;
+      }
+
+      &:hover {
+        background-color: inherit;
+        border-style: none;
+        color: $primary-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: $secondary-blue;
+    border-color: $secondary-blue;
+    color: $primary-white;
+  }
 }

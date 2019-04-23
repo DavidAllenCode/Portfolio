@@ -7047,12 +7047,71 @@ a.text-dark:hover, a.text-dark:focus {
   to {
     transform: rotate(360deg); } }
 
+/* sass mixins - not react mixins, which are evil */
 html,
 body,
 #davidAllen,
 #davidAllen,
 #davidAllen > div {
   height: 100%; }
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px;
+  transition: all linear 0.3s;
+  padding: 1.6rem 2rem; }
+  .btn.btn-primary {
+    background-color: #133770;
+    border: solid 1px #133770;
+    color: #fff;
+    width: 100%;
+    white-space: normal; }
+    .btn.btn-primary.error-btn {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; }
+  .btn.btn-secondary {
+    background-color: #fff;
+    border: solid 1px #d9e1e8;
+    color: #133770;
+    width: 100%;
+    white-space: normal; }
+  .btn.btn-tertiary {
+    background-color: #fff;
+    border: solid 1px #fff;
+    color: #133770;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 100%;
+    white-space: normal; }
+  .btn.btn-text:not([disabled]) {
+    background-color: inherit;
+    border-radius: 0;
+    border-style: none;
+    color: #133770;
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    margin: 0;
+    transition: none;
+    vertical-align: unset; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .btn.btn-text:not([disabled]) {
+        vertical-align: baseline; } }
+    .btn.btn-text:not([disabled]):hover {
+      background-color: inherit;
+      border-style: none;
+      color: #133770;
+      text-decoration: underline; }
+  .btn:hover {
+    background-color: #427aa1;
+    border-color: #427aa1;
+    color: #fff; }
 
 /* sass mixins - not react mixins, which are evil */
 .login {
@@ -7068,5 +7127,7 @@ body,
     .login .username input::placeholder,
     .login .password input::placeholder {
       color: #427aa1; }
+  .login h2 {
+    color: #133770; }
 
 /*# sourceMappingURL=style.css.map */

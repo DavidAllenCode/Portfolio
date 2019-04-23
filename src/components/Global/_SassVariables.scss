@@ -45,6 +45,14 @@ $overlay-primary-gray: rgba(77, 98, 115, 0.8);
   transition: $properties $animation-type $ms-speed;
 }
 
+@mixin border-transition(
+  $properties: all,
+  $animation-type: ease-in,
+  $ms-speed: 0.3s
+) {
+  transition: $properties $animation-type $ms-speed;
+}
+
 @mixin left-to-right-bg-gradient($left-color, $right-color) {
   background: $left-color; /* Old browsers */
   background: -moz-linear-gradient(
